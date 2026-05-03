@@ -438,7 +438,7 @@
 <body>
 <div id="app">
   <header>
-    <h1>BackstockTracker <span>//</span> Inventory</h1>
+    <h1>BackstockTracker</h1>
     <div class="header-badge" id="pending-badge">0 pending</div>
   </header>
 
@@ -630,7 +630,7 @@
             <span class="badge ${r.store.trim() ? 'badge-ready' : 'badge-needs'}">${r.store.trim() ? 'Ready' : 'Needs store #'}</span>
           </div>
           <div class="reorder-bottom">
-            <input class="store-input" id="store-${i}" type="text" placeholder="Store number / name" value="${escHtml(r.store)}" oninput="updateStore(${i}, this.value); rerenderBadge(${i}, this.value);" />
+            <input class="store-input" id="store-${i}" type="text" placeholder="Store number" value="${escHtml(r.store)}" oninput="updateStore(${i}, this.value); rerenderBadge(${i}, this.value);" />
             <button class="btn-complete" onclick="completeReorder(${i})">Done ✓</button>
           </div>
         </div>
